@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Email Template</title>
+</head>
+<body>
+<div class="container">
+    <h4>Welcome , <span th:text="${name}"></span>&nbsp;&nbsp;<span th:text="${lastname}"></span>!</h4>
+    <p>We are excited to have u on-board in <b><span th:text="${companyName}"></span>!</b></p>
+    <p>Your Registration No. is <b><span th:text="${code}"></span></b></p>
+
+    <p>For more information about this organization please visit <b><span th:text="${website}"></span></b></p>
+    <p>In case of query please contact to <b><span th:text="${contact}"></span></b></p>
+
+</div>
+</body>
+</html>

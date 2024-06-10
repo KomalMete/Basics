@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4d5cf50-f13e-4ea0-8bbd-2ffc40d6763c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../dataFormatter/dataFormatter.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_5" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../empcompany" beforeDir="false" afterPath="$PROJECT_DIR$/../empcompany" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2h5LbKYKxZ85XMIZC0eku8GP5za" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="EmpcompanyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="empcompany-2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.omsoft.empcompany.EmpcompanyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4d5cf50-f13e-4ea0-8bbd-2ffc40d6763c" name="Default Changelist" comment="" />
+      <created>1716879061842</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716879061842</updated>
+      <workItem from="1716879065374" duration="16778000" />
+      <workItem from="1716956300377" duration="5227000" />
+      <workItem from="1716962066454" duration="3802000" />
+      <workItem from="1716966490774" duration="13769000" />
+      <workItem from="1717042842801" duration="22732000" />
+      <workItem from="1717129305440" duration="16139000" />
+      <workItem from="1717153992245" duration="4046000" />
+      <workItem from="1717161675098" duration="2148000" />
+      <workItem from="1717388053664" duration="7031000" />
+      <workItem from="1717399716892" duration="4891000" />
+      <workItem from="1717474603341" duration="6170000" />
+      <workItem from="1717647929624" duration="3934000" />
+      <workItem from="1717996698969" duration="1344000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="115" key="#com.intellij.ide.util.MemberChooser" timestamp="1717410946798">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="115" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1717410946798" />
+    <state x="352" y="333" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1716880004311">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="352" y="333" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1716880004311" />
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1717999830818">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1717999830818" />
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.0.center" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.0.left" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.0.right" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.1.center" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.1.left" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state width="1493" height="234" key="GridCell.Tab.1.right" timestamp="1717682502077">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="234" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1717682502077" />
+    <state x="529" y="129" key="RollbackChangesDialog" timestamp="1716891924280">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="529" y="129" key="RollbackChangesDialog/0.0.1536.816@0.0.1536.816" timestamp="1716891924280" />
+    <state x="277" y="53" key="SettingsEditor" timestamp="1717050630188">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1717050630188" />
+    <state x="475" y="166" key="refactoring.ChangeSignatureDialog" timestamp="1717054091850">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="475" y="166" key="refactoring.ChangeSignatureDialog/0.0.1536.816@0.0.1536.816" timestamp="1717054091850" />
+  </component>
+</project>
