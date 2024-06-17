@@ -23,19 +23,31 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Object saveOrUpdate(EmployeeRequest employeeRequest) {
 
         logger.info("Starting saveOrUpdate method.");
-        Optional<Employee> existingEmployee = employeeRepository.findById(employeeRequest.getEmployeeId());
+            try
+            {
+                logger.trace("Entering saveOrUpdate() with parameter: {}", employeeRequest.getName());
+                logger.debug("Employee details: {}", employeeRequest.getName());
 
-        Employee emp = existingEmployee.orElseGet(() -> new Employee());
+                Optional<Employee> existingEmployee = employeeRepository.findById(employeeRequest.getEmployeeId());
 
-        emp.setEmployeeId(employeeRequest.getEmployeeId());
-        emp.setName(employeeRequest.getName());
-        emp.setLastName(employeeRequest.getLastName());
-        emp.setEmail(employeeRequest.getEmail());
-        emp.setPassword(employeeRequest.getPassword());
-        Employee savedEmployee =  employeeRepository.save(emp);
+                Employee emp = existingEmployee.orElseGet(() -> new Employee());
 
-        logger.info("Employee details saved successfully for ID: {}", savedEmployee.getEmployeeId());
+                emp.setEmployeeId(employeeRequest.getEmployeeId());
+                emp.setName(employeeRequest.getName());
+                emp.setLastName(employeeRequest.getLastName());
+                emp.setEmail(employeeRequest.getEmail());
+                emp.setPassword(employeeRequest.getPassword());
+                Employee savedEmployee =  employeeRepository.save(emp);
 
-        return "Employee details saved successfully..";
+                logger.info("Employee details saved successfully for ID: {}", savedEmployee.getEmployeeId());
+
+                return "Employee details saved successfully..";
+            }
+            catch (Exception e)
+            {
+                logger.error("Error saving employee details: {}", e.getMessage(), e);
+                return "Employee details can't be saved.";
+            }
+
     }
 }

@@ -11,8 +11,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee , Long>
-{
+public interface EmployeeRepository extends JpaRepository<Employee , Long> {
     //without sort
     @Query(value = "select * from employees where name like %:name%", nativeQuery = true)
     Page findByName(String name, Pageable pageable);

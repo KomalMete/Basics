@@ -8,16 +8,15 @@
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.omsoft</groupId>
-	<artifactId>demo_3</artifactId>
+	<groupId>com.omsoftware</groupId>
+	<artifactId>demo_2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo_3</name>
-	<description>Demo project for Spring Boot</description>
+	<name>demo_2</name>
+	<description>basic crud operation</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -78,6 +77,15 @@
 			<artifactId>spring-security-crypto</artifactId>
 		</dependency>
 
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+<!--		<dependency>-->
+<!--			<groupId>junit</groupId>-->
+<!--			<artifactId>junit</artifactId>-->
+<!--			<version>4.13.2</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+
 	</dependencies>
 
 	<build>
@@ -86,9 +94,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<image>
-						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
-					</image>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
 				</configuration>
 			</plugin>
 		</plugins>
