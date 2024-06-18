@@ -14,7 +14,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee , Long> {
     //without sort
     @Query(value = "select * from employees where name like %:name%", nativeQuery = true)
-    Page findByName(String name, Pageable pageable);
+    Page<Employee> findByName(String name, Pageable pageable);
 
     //with sort
     @Query(value = "select * from employees where address like %:address%",nativeQuery = true)

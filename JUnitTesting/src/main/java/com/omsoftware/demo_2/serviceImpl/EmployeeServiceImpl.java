@@ -61,9 +61,6 @@ public class EmployeeServiceImpl implements EmployeeService {
             emp.setContact(employeeRequest.getContact());
             emp.setEmail(employeeRequest.getEmail());
             emp.setPassword(employeeRequest.getPassword());
-            //saving bcryptpassword
-            //String newBcryptPassword = hashPassword(employeeRequest.getPassword());
-            //emp.setPassword(newBcryptPassword);
             employeeRepository.save(emp);
             return "Employee Details Updated Successfully..";
         }
@@ -77,77 +74,10 @@ public class EmployeeServiceImpl implements EmployeeService {
             emp.setContact(employeeRequest.getContact());
             emp.setEmail(employeeRequest.getEmail());
             emp.setPassword(employeeRequest.getPassword());
-            //saving bcryptpassword
-            //String newBcryptPassword = hashPassword(employeeRequest.getPassword());
-            //emp.setPassword(newBcryptPassword);
 
 
-            //email without attachment
-            //this.sendEmail("komalmete8@gmail.com", "komaldmete16@gmail.com", "Inside Subject", "Inside Body");
-            //employeeRepository.save(emp);
-            //return "Employee Saved..";
-
-
-            //email with attachment
-            //double \\ after programs is manually given
-            //if you want to include an actual backslash character in a string, you need to escape it by using a double backslash (\\)
-//            try{
-//                String attachment = "D:\\OM_Software_programs\\welcome-sign-design.webp";
-//                this.sendEmailWithAttachment("komalmete8@gmail.com", "komaldmete16@gmail.com", "Inside Subject", "Inside Body", attachment);
-//                employeeRepository.save(emp);
-//                return "Employee Details Saved Successfully...";
-//            }
-//           catch (MessagingException e)
-//           {
-//               e.printStackTrace();
-//               return "Employee Details not saved..";
-//           }
-
-            //email with html-content
-//            try{
-//                Context context = new Context();
-//                context.setVariable("name", emp.getName());
-//                this.sendEmailWithTemplate("komalmete8@gmail.com", "Using Template", context);
-//                employeeRepository.save(emp);
-//                return "Employee Details Saved Successfully...";
-//            }
-//            catch (MessagingException e)
-//            {
-//                e.printStackTrace();
-//               return "Employee Details not saved..";
-//            }
-
-
-            //send with pdf
-//            try
-//            {
-//                Context context = new Context();
-//                context.setVariable("name", emp.getName());
-//                this.sendEmailWithPDF("komalmete8@gmail.com", "Using HTML to PDF", context);
-//                employeeRepository.save(emp);
-//               return "Employee Details Saved Successfully...";
-//            }
-//            catch (MessagingException e)
-//            {
-//                e.printStackTrace();
-//                return "Employee Details not saved..";
-//            }
-
-            //send email with template + otp
-            try{
-                String otpGenerated = generateOTP();
-                Context context = new Context();
-                context.setVariable("name", emp.getName());
-                context.setVariable("otp",otpGenerated);
-                this.sendEmailWithTemplate("komalmete8@gmail.com", "OTP Generation", context);
-                employeeRepository.save(emp);
-                return "Employee Details Saved Successfully...";
-            }
-            catch (MessagingException e)
-            {
-                e.printStackTrace();
-               return "Employee Details not saved..";
-            }
+            employeeRepository.save(emp);
+            return "Employee Details Saved Successfully...";
         }
     }
 
