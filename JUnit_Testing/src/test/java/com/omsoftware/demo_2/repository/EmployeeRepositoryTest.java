@@ -64,4 +64,13 @@ public class EmployeeRepositoryTest {
 
         assertThat(emp.getContent().get(0).getLocation()).isEqualTo(employee.getLocation());
     }
+
+    //3.find by email
+    @Test
+    void TestFoundByEmail()
+    {
+        Employee emp = employeeRepository.findByEmail("komalmete8@gmail.com");
+
+        assertThat(emp.getEmail()).isEqualTo(employee.getEmail());
+    }
 }
