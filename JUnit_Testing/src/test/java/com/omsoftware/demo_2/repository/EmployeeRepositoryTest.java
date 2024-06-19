@@ -9,6 +9,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -52,5 +53,15 @@ public class EmployeeRepositoryTest {
         Page<Employee> emp =  employeeRepository.findByName("Dipti", pageable);
 
         assertThat(emp.isEmpty()).toString();
+    }
+
+    //2.search by location
+    @Test
+    void TestFoundByLocation()
+    {
+        Pageable pageable = PageRequest.of(0, 5, Sort.by("location"));
+        Page<Employee> emp =  employeeRepository.findByLocation("Pune", pageable);
+
+        assertThat(emp.getContent().get(0).getLocation()).isEqualTo(employee.getLocation());
     }
 }

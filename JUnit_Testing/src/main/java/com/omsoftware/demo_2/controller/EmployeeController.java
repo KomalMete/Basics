@@ -92,9 +92,9 @@ public class EmployeeController {
     }
 
     @GetMapping("/searchByAddress")
-    public ResponseEntity<?> searchByAddress(@RequestParam(required = false, defaultValue = "0") Integer pageNo,
+    public ResponseEntity<?> searchByLocation(@RequestParam(required = false, defaultValue = "0") Integer pageNo,
                                              @RequestParam(required = false, defaultValue = "3") Integer pageSize,
-                                             @RequestParam(required = false, name = "address") String address,
+                                             @RequestParam(required = false, name = "location") String location,
                                              @RequestParam(required = false, name = "sortBy") String sortBy
                                              )
     {
@@ -102,7 +102,7 @@ public class EmployeeController {
         try
         {
             Pageable pageable = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
-            return new ResponseEntity<>(new EntityResponse(employeeService.searchByAddress(address, pageable), 0), HttpStatus.OK);
+            return new ResponseEntity<>(new EntityResponse(employeeService.searchByLocation(location, pageable), 0), HttpStatus.OK);
         }
         catch (Exception e)
         {

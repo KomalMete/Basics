@@ -18,8 +18,8 @@ public interface EmployeeRepository extends JpaRepository<Employee , Long>
     Page<Employee> findByName(String name, Pageable pageable);
 
     //with sort
-    @Query(value = "select * from employees where address like %:address%",nativeQuery = true)
-    Page findByAddress(String address, Pageable pageable);
+    @Query(value = "select * from employees where location like %:location%",nativeQuery = true)
+    Page<Employee> findByLocation(String location, Pageable pageable);
 
     Page findByNameAndLastName(String name, String lastName, Pageable pageable);
 

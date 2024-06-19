@@ -215,11 +215,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Object searchByAddress(String address, Pageable pageable) {
+    public Object searchByLocation(String location, Pageable pageable) {
 
-        if(address != null && !address.isEmpty())
+        if(location != null && !location.isEmpty())
         {
-            return employeeRepository.findByAddress(address, pageable);
+            return employeeRepository.findByLocation(location, pageable);
         }
         else
         {

@@ -17,7 +17,7 @@ public interface EmployeeService {
 
     Object searchByName(String name, Pageable pageable);
 
-    Object searchByAddress(String address, Pageable pageable);
+    Object searchByLocation(String location, Pageable pageable);
 
     Object searchByNameAndLastName(String name, String lastName , Pageable pageable);
 
