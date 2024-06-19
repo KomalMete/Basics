@@ -20,14 +20,22 @@ public class EmployeeRequest {
 
     private String name;
 
+    private String userName;
+
     private String lastName;
 
     private String location;
 
-    private String contact;
+    private double contact;
 
     private String email;
 
     private String password;
 
+    private String address;
+
+    public Long getEmployeeId()
+    {
+        return employeeId;
+    }
 }

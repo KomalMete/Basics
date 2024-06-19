@@ -180,18 +180,18 @@ public class EmployeeController {
         }
     }
 
-//    @PostMapping("/changeStatus")
-//    public ResponseEntity<?> changeStatus(@RequestParam (name = "employeeId") Long employeeId)
-//    {
-//        try
-//        {
-//            return new ResponseEntity<>( new EntityResponse(employeeService.changeStatus(employeeId), 0), HttpStatus.OK);
-//        }
-//        catch (Exception e)
-//        {
-//            return new ResponseEntity<>( new CustomEntityResponse(e.getMessage(), -1), HttpStatus.OK);
-//        }
-//    }
+    @PostMapping("/changeStatus")
+    public ResponseEntity<?> changeStatus(@RequestParam (name = "employeeId") Long employeeId)
+    {
+        try
+        {
+            return new ResponseEntity<>( new EntityResponse(employeeService.changeStatus(employeeId), 0), HttpStatus.OK);
+        }
+        catch (Exception e)
+        {
+            return new ResponseEntity<>( new CustomEntityResponse(e.getMessage(), -1), HttpStatus.OK);
+        }
+    }
 
     @PostMapping("/fileUpload")
     public ResponseEntity<?> fileUpload(@RequestParam(name = "file")MultipartFile file)
