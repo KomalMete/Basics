@@ -27,7 +27,7 @@ public interface EmployeeService {
 
     Object changePassword(Long employeeId, String oldPassword, String newPassword);
 
-    Object changeStatus(Long employeeId);
+    //Object changeStatus(Long employeeId);
 
     Object fileUpload(MultipartFile file);
 

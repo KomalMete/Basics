@@ -8,11 +8,11 @@
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.omsoftware</groupId>
-	<artifactId>demo_2</artifactId>
+	<groupId>com.example</groupId>
+	<artifactId>JUnit_Testing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo_2</name>
-	<description>basic crud operation</description>
+	<name>JUnit_Testing</name>
+	<description>JUnit_Testing</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -75,6 +75,15 @@
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-crypto</artifactId>
+		</dependency>
+
+		<!-- for testing purpose-->
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.2.224</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

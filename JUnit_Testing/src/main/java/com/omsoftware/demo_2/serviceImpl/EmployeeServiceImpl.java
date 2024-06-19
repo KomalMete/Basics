@@ -56,18 +56,11 @@ public class EmployeeServiceImpl implements EmployeeService {
             Employee emp = new Employee();
             emp.setEmployeeId(employeeRequest.getEmployeeId());
             emp.setName(employeeRequest.getName());
-            emp.setUserName(employeeRequest.getUserName());
             emp.setLastName(employeeRequest.getLastName());
             emp.setLocation(employeeRequest.getLocation());
             emp.setContact(employeeRequest.getContact());
             emp.setEmail(employeeRequest.getEmail());
-            //emp.setPassword(employeeRequest.getPassword());
-            //saving bcryptpassword
-            String newBcryptPassword = hashPassword(employeeRequest.getPassword());
-            emp.setPassword(newBcryptPassword);
-            emp.setAddress(employeeRequest.getAddress());
-            emp.setActive(true);
-            emp.setDeleted(false);
+            emp.setPassword(employeeRequest.getPassword());
             employeeRepository.save(emp);
             return "Employee Details Updated Successfully..";
         }
@@ -76,85 +69,14 @@ public class EmployeeServiceImpl implements EmployeeService {
             Employee emp = new Employee();
             emp.setEmployeeId(employeeRequest.getEmployeeId());
             emp.setName(employeeRequest.getName());
-            emp.setUserName(employeeRequest.getUserName());
             emp.setLastName(employeeRequest.getLastName());
             emp.setLocation(employeeRequest.getLocation());
             emp.setContact(employeeRequest.getContact());
             emp.setEmail(employeeRequest.getEmail());
-            //emp.setPassword(employeeRequest.getPassword());
-            //saving bcryptpassword
-            String newBcryptPassword = hashPassword(employeeRequest.getPassword());
-            emp.setPassword(newBcryptPassword);
-            emp.setAddress(employeeRequest.getAddress());
-            emp.setActive(true);
-            emp.setDeleted(false);
+            emp.setPassword(employeeRequest.getPassword());
 
-            //email without attachment
-            //this.sendEmail("komalmete8@gmail.com", "komaldmete16@gmail.com", "Inside Subject", "Inside Body");
-            //employeeRepository.save(emp);
-            //return "Employee Saved..";
-
-
-            //email with attachment
-            //double \\ after programs is manually given
-            //if you want to include an actual backslash character in a string, you need to escape it by using a double backslash (\\)
-//            try{
-//                String attachment = "D:\\OM_Software_programs\\welcome-sign-design.webp";
-//                this.sendEmailWithAttachment("komalmete8@gmail.com", "komaldmete16@gmail.com", "Inside Subject", "Inside Body", attachment);
-//                employeeRepository.save(emp);
-//                return "Employee Details Saved Successfully...";
-//            }
-//           catch (MessagingException e)
-//           {
-//               e.printStackTrace();
-//               return "Employee Details not saved..";
-//           }
-
-            //email with html-content
-//            try{
-//                Context context = new Context();
-//                context.setVariable("name", emp.getName());
-//                this.sendEmailWithTemplate("komalmete8@gmail.com", "Using Template", context);
-//                employeeRepository.save(emp);
-//                return "Employee Details Saved Successfully...";
-//            }
-//            catch (MessagingException e)
-//            {
-//                e.printStackTrace();
-//               return "Employee Details not saved..";
-//            }
-
-
-            //send with pdf
-//            try
-//            {
-//                Context context = new Context();
-//                context.setVariable("name", emp.getName());
-//                this.sendEmailWithPDF("komalmete8@gmail.com", "Using HTML to PDF", context);
-//                employeeRepository.save(emp);
-//               return "Employee Details Saved Successfully...";
-//            }
-//            catch (MessagingException e)
-//            {
-//                e.printStackTrace();
-//                return "Employee Details not saved..";
-//            }
-
-            //send email with template + otp
-            try{
-                String otpGenerated = generateOTP();
-                Context context = new Context();
-                context.setVariable("name", emp.getName());
-                context.setVariable("otp",otpGenerated);
-                this.sendEmailWithTemplate("komalmete8@gmail.com", "OTP Generation", context);
-                employeeRepository.save(emp);
-                return "Employee Details Saved Successfully...";
-            }
-            catch (MessagingException e)
-            {
-                e.printStackTrace();
-               return "Employee Details not saved..";
-            }
+            employeeRepository.save(emp);
+            return "Employee Details Saved Successfully..";
         }
     }
 
@@ -372,30 +294,30 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
-    @Override
-    public Object changeStatus(Long employeeId) {
-
-        if(employeeRepository.existsById(employeeId))
-        {
-            Employee emp = employeeRepository.findById(employeeId).get();
-            if(emp.isActive())
-            {
-                emp.setActive(false);
-                employeeRepository.save(emp);
-               return "Employee status change to In-Active..";
-            }
-            else
-            {
-                emp.setActive(true);
-                employeeRepository.save(emp);
-                return "Employee status change to Active..";
-            }
-        }
-        else
-        {
-           return "Employee Doesnt Exists..";
-        }
-    }
+//    @Override
+//    public Object changeStatus(Long employeeId) {
+//
+//        if(employeeRepository.existsById(employeeId))
+//        {
+//            Employee emp = employeeRepository.findById(employeeId).get();
+//            if(emp.isActive())
+//            {
+//                emp.setActive(false);
+//                employeeRepository.save(emp);
+//               return "Employee status change to In-Active..";
+//            }
+//            else
+//            {
+//                emp.setActive(true);
+//                employeeRepository.save(emp);
+//                return "Employee status change to Active..";
+//            }
+//        }
+//        else
+//        {
+//           return "Employee Doesnt Exists..";
+//        }
+//    }
 
     @Override
     public Object fileUpload(MultipartFile file) {
