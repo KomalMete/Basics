@@ -36,7 +36,7 @@ public class EmployeeRepositoryTest {
 
     //test case Success
     // 1.  search by name
-
+    //found
     @Test
     void TestFoundByName_Found()
     {
@@ -46,6 +46,7 @@ public class EmployeeRepositoryTest {
        assertThat(emp.getContent().get(0).getName()).isEqualTo(employee.getName());
     }
 
+    //not found
     @Test
     void TestFoundByName_NotFound()
     {
@@ -57,7 +58,7 @@ public class EmployeeRepositoryTest {
 
     //2.search by location
     @Test
-    void TestFoundByLocation()
+    void TestFoundByLocation_Found()
     {
         Pageable pageable = PageRequest.of(0, 5, Sort.by("location"));
         Page<Employee> emp =  employeeRepository.findByLocation("Pune", pageable);
@@ -65,13 +66,33 @@ public class EmployeeRepositoryTest {
         assertThat(emp.getContent().get(0).getLocation()).isEqualTo(employee.getLocation());
     }
 
-    //6.find by email
+    //not found
     @Test
-    void TestFoundByEmail()
+    void TestFoundByLocation_NotFound()
+    {
+        Pageable pageable = PageRequest.of(0, 5, Sort.by("location"));
+        Page<Employee> emp =  employeeRepository.findByLocation("Mumbai", pageable);
+
+        assertThat(emp.getContent()).isEmpty();
+    }
+
+    //6.find by email
+    //found
+    @Test
+    void TestFoundByEmail_Found()
     {
         Employee emp = employeeRepository.findByEmail("komalmete8@gmail.com");
 
         assertThat(emp.getEmail()).isEqualTo(employee.getEmail());
+    }
+
+    //not found
+    @Test
+    void TestFoundByEmail_NotFound()
+    {
+        Employee emp = employeeRepository.findByEmail("komalmete@gmail.com");
+
+        assertThat(emp).isNull();
     }
 
     //7.exists by email
