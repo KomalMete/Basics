@@ -1,6 +1,7 @@
 package com.omsoftware.demo_2.repository;
 
 import com.omsoftware.demo_2.model.Employee;
+import com.omsoftware.demo_2.projection.EmployeeProjection;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -98,6 +99,35 @@ public class EmployeeRepositoryTest {
         assertThat(emp.isEmpty());
 
     }
+
+    //5.find by projection
+    //found
+    @Test
+    void TestFoundByProjection_Found()
+    {
+        Pageable pageable = PageRequest.of(0, 5);
+        Page<EmployeeProjection> emp = employeeRepository.findByProjection(pageable);
+
+        assertThat(emp.getContent()).isNotEmpty();
+
+        EmployeeProjection employeeProjection = emp.getContent().get(0);
+
+        assertThat(employeeProjection.getName()).isEqualTo("Komal");
+    }
+
+//    //not found
+//    @Test
+//    void TestFoundByProjection_NotFound()
+//    {
+//        Pageable pageable = PageRequest.of(0, 5);
+//        Page<EmployeeProjection> emp = employeeRepository.findByProjection(pageable);
+//
+//        assertThat(emp).isEmpty();
+//
+//       // EmployeeProjection employeeProjection = emp.getContent().get(0);
+//
+//        //assertThat(employeeProjection.getName()).isEqualTo("Komal");
+//    }
 
     //6.find by email
     //found
