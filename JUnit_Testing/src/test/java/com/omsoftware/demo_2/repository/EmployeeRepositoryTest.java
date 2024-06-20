@@ -76,6 +76,29 @@ public class EmployeeRepositoryTest {
         assertThat(emp.getContent()).isEmpty();
     }
 
+    //3.find by name and lastname
+    //found
+    @Test
+    void TestFoundByNameAndLastName_Found()
+    {
+        Pageable pageable = PageRequest.of(0, 5, Sort.by("name"));
+        Page<Employee> emp =  employeeRepository.findByNameAndLastName("Komal","Mete",pageable);
+
+        assertThat(emp.getContent().get(0).getName()).isEqualTo(employee.getName());
+        assertThat(emp.getContent().get(0).getLastName()).isEqualTo(employee.getLastName());
+    }
+
+    // not found
+    @Test
+    void TestFoundByNameAndLastName_NotFound()
+    {
+        Pageable pageable = PageRequest.of(0, 5, Sort.by("name"));
+        Page<Employee> emp =  employeeRepository.findByNameAndLastName("preeti","Mete",pageable);
+
+        assertThat(emp.isEmpty());
+
+    }
+
     //6.find by email
     //found
     @Test

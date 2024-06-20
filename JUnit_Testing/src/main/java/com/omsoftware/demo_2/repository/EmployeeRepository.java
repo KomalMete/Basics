@@ -21,11 +21,11 @@ public interface EmployeeRepository extends JpaRepository<Employee , Long>
     @Query(value = "select * from employees where location like %:location%",nativeQuery = true)
     Page<Employee> findByLocation(String location, Pageable pageable);
 
-    Page findByNameAndLastName(String name, String lastName, Pageable pageable);
+    Page<Employee> findByNameAndLastName(String name, String lastName, Pageable pageable);
 
     //last_name as its sql related query so give column name as present in db
     @Query(value = "select * from employees where CONCAT(name,'',last_name) like %:userName% ",nativeQuery = true)
-    Page searchByName1AndLastName(String userName, Pageable pageable);
+    Page<Employee> searchByName1AndLastName(String userName, Pageable pageable);
 
     //db query
     @Query(value = "select name as name, last_name as lastName, email as email from employees", nativeQuery = true)
