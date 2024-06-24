@@ -47,6 +47,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private TemplateEngine templateEngine;
 
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+    }
+
     @Override
     public Object saveOrUpdate(EmployeeRequest employeeRequest)
     {
