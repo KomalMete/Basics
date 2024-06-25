@@ -19,7 +19,7 @@ public class Student {
 
     private String name;
 
-    @ManyToMany(mappedBy = "students")
+    @ManyToMany(mappedBy = "students" , cascade = CascadeType.ALL)
     private List<Course> courseList;
 
 

@@ -5,4 +5,6 @@ import com.exe.mapping_demo.models.request.StudentRequest;
 
 public interface StudentService {
     Object saveStudent(StudentRequest studentRequest);
+
+    Object deleteStudent(Long id);
 }

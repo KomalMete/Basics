@@ -10,6 +10,7 @@ import com.exe.mapping_demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -60,4 +61,26 @@ public class StudentServiceImpl implements StudentService {
         }
         return "Student details saved successfully..";
     }
+
+    @Transactional
+    @Override
+    public Object deleteStudent(Long id) {
+
+        try {
+            Student student = studentRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Stuent dosent exist"));
+
+            List<Course> courses = student.getCourseList();
+
+//            for (Course course : courses) {
+//                course.removeStudent(student);
+//            }
+            studentRepository.deleteById(id);
+
+            return "Student details removed successfully..";
+        }
+        catch (Exception e) {
+            throw new RuntimeException("Failed to delete student: " + e.getMessage());
+        }
+    }
+
 }
