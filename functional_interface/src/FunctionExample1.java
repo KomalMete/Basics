@@ -56,11 +56,24 @@ public class FunctionExample1 {
                         new Student("Saket", 25),
                         };
 
+
+        //displaying data of every student on screen with name, marks, grade
+//        for(Student student : s)
+//        {
+//            System.out.println("student name" + " : " +student.name);
+//            System.out.println("student marks" + " : " +student.marks);
+//            System.out.println("student grade" + " : " +f.apply(student));
+//        }
+
+        //students with marks greater than 60
+        Predicate<Student> p = m -> m.marks>=60;
         for(Student student : s)
         {
-            System.out.println("student name" + " : " +student.name);
-            System.out.println("student marks" + " : " +student.marks);
-            System.out.println("student grade" + " : " +f.apply(student));
+            if(p.test(student)) {
+                System.out.println("student name" + " : " + student.name);
+                System.out.println("student marks" + " : " + student.marks);
+                System.out.println("student grade" + " : " + f.apply(student));
+            }
         }
     }
 }
