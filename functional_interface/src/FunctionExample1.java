@@ -65,6 +65,7 @@ public class FunctionExample1 {
 //            System.out.println("student grade" + " : " +f.apply(student));
 //        }
 
+
         //students with marks greater than 60
         Predicate<Student> p = m -> m.marks>=60;
         for(Student student : s)
